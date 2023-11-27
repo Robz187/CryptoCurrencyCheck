@@ -14,7 +14,8 @@
  <div>
 <form method="post">
     <%if (locals.data){%>
-    <h2>Your Currency status for: <a class="currency"> <img class="logo" src="<%= data.name %>.png"> <%=data.name%></a> </h2>
+    <h2>Your Currency status for: </h2>
+    <a class="currency"><%=data.name%> <img class="logo" src="<%= data.name %>.png"></a>
     <p>Current Price : <%= parseFloat(data.priceUsd).toFixed(2)%> USD</p>
     <button type="submit"  formaction="/">Go back </button>
     <%}else{%>
@@ -24,18 +25,15 @@
 </div> 
 
 <diV>
-  
-     <button>Open Last Month Graph</button>
-        <h2>Last Month Graph</h2>
-        <%=locals.data.id%>
-
+<form method="post">   
+     <button type="submit" id="graph" value='<%=data.name.toLowerCase()%>' name="currency" formaction="/graph">Open Last Month Graph</button>
+</form>
 </diV>
 
 
 <div>
     <footer>Copyright by Robert Saliger</footer>
 </div>
-
 </body>
 
 </html>
