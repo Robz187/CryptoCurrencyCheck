@@ -13,9 +13,13 @@
 
  <div>
 <form method="post">
-    <h2>Your Currency status for: <a class="currency"> <img class="logo" src="<%= data.symbol %>.png"> <%=data.symbol%></a> </h2>
-    <p>Current Price : <%= data.price_24h%> USD</p>
+    <%if (locals.data){%>
+    <h2>Your Currency status for: <a class="currency"> <img class="logo" src="<%= data.name %>.png"> <%=data.name%></a> </h2>
+    <p>Current Price : <%= parseFloat(data.priceUsd).toFixed(2)%> USD</p>
     <button type="submit"  formaction="/">Go back </button>
+    <%}else{%>
+        <h2>Error 400 pls check console for Info</h2>
+        <%}%>
 </form>
 </div> 
 
