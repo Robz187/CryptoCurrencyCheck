@@ -39,27 +39,6 @@ app.post("/currency",async(req,res)=>{
     }
 });
 
-app.post("/graph",async(req,res)=>{
-    const currency = req.body.currency;
-    try
-    {
-       const history =await axios.get(apiURL+"/assets/"+currency+"/history?interval=m1");
-       const historyData = JSON.stringify(history.data);
-       const graphdata = JSON.parse(historyData);
-       console.log(graphdata.data[1]);
-        res.render("graphdata.ejs",graphdata)
-       
-    } catch(error)
-    {
-       console.error(error.message);
-       console.log(error); 
-    } 
-
-})
-app.get("/graph",(req,res)=>{
-
-    res.redirect("/");
-})
 
 app.listen(port,()=>{
 

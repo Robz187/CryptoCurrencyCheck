@@ -4,35 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif:wght@100&display=swap" rel="stylesheet">
     <title>Crypto Currency Check </title>
 </head>
 <body>
- <div>
+ <div class="container top">
     <h1>Crypto Currency Checker</h1>
 </div>
 
- <div>
-<form method="post">
+ <div class="container-item">
+    <div class="container header">    
     <h2>Choose your Curency to Check </h2>
-    <a>
+    <img height="50px" src="arrow.png" alt="arrow down"/>
+    </div>
+    <diV class="container"><diV>    
+    <form method="post">
+    <a class="item">
         <img class="logo" src="bitcoin.png" alt="Bitcoin-Logo">
-        <button type="submit" value="bitcoin" name="currency" formaction="/currency">BTC</button>
+        <button class="btn btc" type="submit" value="bitcoin" name="currency" formaction="/currency">BTC</button>
     </a>
     
-    <a>
+    <a class="item">
         <img class="logo" src="ethereum.png" alt="Etherium-Logo">
-        <button type="submit" value="ethereum" name="currency" formaction="/currency">Etherium</button>
+        <button class="btn eth" type="submit" value="ethereum" name="currency" formaction="/currency">Etherium</button>
     </a>
    
-    <a>
+    <a class="item">
         <img class="logo" src="dogecoin.png" alt="DogeCoin-Logo">
-        <button type="submit" value="dogecoin" name="currency" formaction="/currency">Doge Coin</button>
+        <button class="btn doge" type="submit" value="dogecoin" name="currency" formaction="/currency">Doge Coin</button>
     </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</form>
-</div> 
+    </form> 
+    </diV>
+    </diV>  
 
-<div>
+    </div> 
+
+<div class="container footer">
     <footer>Copyright by Robert Saliger</footer>
 </div>
 

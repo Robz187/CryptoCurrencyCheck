@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif:wght@100&display=swap" rel="stylesheet">
     <title>Crypto Currency Check </title>
 </head>
 <body>
- <div>
+ <div class="container top">
     <h1>Crypto Currency Checker</h1>
 </div>
 
- <div>
-<form method="post">
-    <%if (locals.data){%>
-    <h2>Your Currency status for: </h2>
-    <a class="currency"><%=data.name%> <img class="logo" src="<%= data.name %>.png"></a>
-    <p>Current Price : <%= parseFloat(data.priceUsd).toFixed(2)%> USD</p>
-    <button type="submit"  formaction="/">Go back </button>
-    <%}else{%>
+ <div class="container-item">
+<div class="container">
+    <form method="post">
+        <%if (locals.data){%>
+        <h2>Your Currency status for: </h2>
+        <a class="currency"><%=data.name%> <img class="logo" src="<%= data.name %>.png"></a>
+        <p  class="currency flex">Current Price :<a class="flex" style="color: green;"><%= parseFloat(data.priceUsd).toFixed(2)%></a> ＄</p>
+        <button class="btn eth" type="submit"  formaction="/">Go back </button>
+        <%}else{%>
         <h2>Error 400 pls check console for Info</h2>
         <%}%>
-</form>
+    </form>
+</div>
 </div> 
 
-<diV>
-<form method="post">   
-     <button type="submit" id="graph" value='<%=data.name.toLowerCase()%>' name="currency" formaction="/graph">Open Last Month Graph</button>
-</form>
-</diV>
 
 
-<div>
+<div class="container footer">
     <footer>Copyright by Robert Saliger</footer>
 </div>
 </body>
